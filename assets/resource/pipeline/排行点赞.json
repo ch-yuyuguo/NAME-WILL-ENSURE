@@ -1,0 +1,50 @@
+{
+    "排行点赞": {
+        "next": [
+            "进入排行榜",
+            "排行榜返回主界面"
+        ]
+    },
+    "进入排行榜": {
+        "recognition": "TemplateMatch",
+        "template": "排行榜图标.png",
+        "roi": [
+            1065,
+            0,
+            137,
+            135
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "target": true,
+        "next": [
+            "点赞"
+        ]
+    },
+    "点赞": {
+        "action": "Click",
+        "target": [
+            1145,
+            186,
+            36,
+            33
+        ],
+        "next": [
+            "排行榜返回主界面"
+        ]
+    },
+    "排行榜返回主界面": {
+        "recognition": "TemplateMatch",
+        "template": "排行榜返回主界面按钮.png",
+        "roi": [
+            0,
+            0,
+            160,
+            146
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "target": true,
+        "next": []
+    }
+}

@@ -1,0 +1,164 @@
+{
+    "进入游戏": {
+        "next": [
+            "点击进入游戏",
+            "第一种登录界面情况"
+        ],
+        "interrupt": [
+            "点击进入游戏会出现的弹窗关闭按钮1",
+            "点击进入游戏会出现的弹窗关闭按钮2"
+        ]
+    },
+    "第一种登录界面情况": {
+        "recognition": "TemplateMatch",
+        "roi": [
+            112,
+            489,
+            1048,
+            231
+        ],
+        "template": "登录界面1-选择QQ-勾选同意框.png",
+        "threshold": 0.5,
+        "next": [
+            "同意框已被勾选-点击与QQ伙伴玩"
+        ],
+        "interrupt": [
+            "勾选同意框"
+        ]
+    },
+    "勾选同意框": {
+        "recognition": "TemplateMatch",
+        "template": "同意框未被勾选.png",
+        "action": "Click",
+        "target": true
+    },
+    "同意框已被勾选-点击与QQ伙伴玩": {
+        "recognition": "TemplateMatch",
+        "template": "同意框已被勾选.png",
+        "threshold": 0.8,
+        "action": "Click",
+        "target": [
+            704,
+            559,
+            273,
+            36
+        ],
+        "next": [
+            "确认目标账号-点击同意"
+        ],
+        "interrupt": [
+            "切换至目标账号"
+        ]
+    },
+    "确认目标账号-点击同意": {
+        "recognition": "OCR",
+        "expected": [
+            "灵泽"
+        ],
+        "action": "Click",
+        "target": [
+            550,
+            529,
+            175,
+            42
+        ],
+        "next": [
+            "授权-点击同意"
+        ]
+    },
+    "授权-点击同意": {
+        "action": "Click",
+        "target": [
+            541,
+            511,
+            193,
+            39
+        ],
+        "next": [
+            "点击进入游戏"
+        ],
+        "interrupt": [
+            "点击进入游戏会出现的弹窗关闭按钮1"
+        ]
+    },
+    "点击进入游戏": {
+        "recognition": "TemplateMatch",
+        "template": "开始游戏按钮.png",
+        "roi": [
+            418,
+            558,
+            433,
+            139
+        ],
+        "action": "Click",
+        "target": true,
+        "timeout": 15000,
+        "next": []
+    },
+    "点击进入游戏会出现的弹窗关闭按钮2": {
+        "recognition": "TemplateMatch",
+        "template": "登陆界面弹窗关闭按钮2.png",
+        "roi": [
+            0,
+            0,
+            1254,
+            121
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "target": true,
+        "target_offset": [
+            -8,
+            -8,
+            -8,
+            -8
+        ],
+        "next": []
+    },
+    "点击进入游戏会出现的弹窗关闭按钮1": {
+        "recognition": "TemplateMatch",
+        "template": "登录界面弹窗关闭按钮1.png",
+        "roi": [
+            0,
+            0,
+            1254,
+            121
+        ],
+        "threshold": 0.8,
+        "action": "Click",
+        "target": true,
+        "target_offset": [
+            -8,
+            -8,
+            -8,
+            -8
+        ],
+        "next": []
+    },
+    "切换至目标账号": {
+        "recognition": "OCR",
+        "roi": [
+            593,
+            596,
+            100,
+            25
+        ],
+        "expected": [
+            "切换账号"
+        ],
+        "action": "Click",
+        "target": true,
+        "next": [
+            "选择目标账号"
+        ]
+    },
+    "选择目标账号": {
+        "recognition": "OCR",
+        "expected": [
+            "1097168763"
+        ],
+        "action": "Click",
+        "target": true,
+        "next": []
+    }
+}

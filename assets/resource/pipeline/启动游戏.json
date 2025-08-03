@@ -1,0 +1,7 @@
+{
+    "启动航海王：壮志雄心": {
+        "recognition": "DirectHit",
+        "action": "StartApp",
+        "package": "com.tencent.hhw"
+    }
+}

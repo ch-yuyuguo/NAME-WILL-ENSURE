@@ -1,0 +1,68 @@
+{
+    "领取邮件奖励": {
+        "next": [
+            "进入邮件界面"
+        ]
+    },
+    "进入邮件界面": {
+        "recognition": "TemplateMatch",
+        "template": "邮件按钮.png",
+        "roi": [
+            0,
+            529,
+            135,
+            130
+        ],
+        "action": "Click",
+        "target": true,
+        "next": [
+            "邮件-点击一键领取"
+        ]
+    },
+    "邮件-点击一键领取": {
+        "recognition": "TemplateMatch",
+        "template": "邮件-一键领取按钮.png",
+        "roi": [
+            286,
+            598,
+            225,
+            122
+        ],
+        "action": "Click",
+        "target": true,
+        "next": [
+            "从邮件界面返回主界面"
+        ],
+        "interrupt": [
+            "点击空白处关闭"
+        ]
+    },
+    "点击空白处关闭": {
+        "recognition": "TemplateMatch",
+        "template": "邮件-点击空白处关闭.png",
+        "threshold": 0.5,
+        "roi": [
+            496,
+            618,
+            287,
+            102
+        ],
+        "action": "Click",
+        "target": true,
+        "next": []
+    },
+    "从邮件界面返回主界面": {
+        "recognition": "TemplateMatch",
+        "template": "从邮件返回主界面的按钮.png",
+        "threshold": 0.8,
+        "roi": [
+            0,
+            0,
+            158,
+            140
+        ],
+        "action": "Click",
+        "target": true,
+        "next": []
+    }
+}
